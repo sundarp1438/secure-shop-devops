@@ -59,11 +59,11 @@ pipeline {
         //         dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
         //     }
         // }
-        stage('TRIVY FS SCAN') {
-            steps {
-                sh "trivy fs . > trivyfs.txt"
-            }
-        }
+        // stage('TRIVY FS SCAN') {
+        //     steps {
+        //         sh "trivy fs . > trivyfs.txt"
+        //     }
+        // }
         
         // stage('Build') {
         //     steps {
@@ -98,12 +98,12 @@ pipeline {
             }
         }
         
-        stage('Trivy Scan') {
-            steps {
-                sh "trivy image sundarp1985/shoppingcart-app:latest > trivy-report.txt "
+        // stage('Trivy Scan') {
+        //     steps {
+        //         sh "trivy image sundarp1985/shoppingcart-app:latest > trivy-report.txt "
                 
-            }
-        }
+        //     }
+        // }
         
         stage('Push The Docker Image') {
             steps {
