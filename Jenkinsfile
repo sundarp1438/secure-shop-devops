@@ -83,8 +83,8 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'DockerHubPass', toolName: 'docker') {
-                        sh "docker build -t board-game-app -f Dockerfile ."
-                        sh "docker tag  board-game-app sundarp1985/shoppingcart-app:latest"
+                        sh "docker build -t shopping-cart -f Dockerfile ."
+                        sh "docker tag  shopping-cart sundarp1985/shoppingcart-app:latest"
                         
                     }
                 }
