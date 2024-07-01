@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Git Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/sundarp1438/secure-shop-devop.git'
+                git branch: 'main', url: 'https://github.com/sundarp1438/secure-shop-devops.git'
             }
         }
         
